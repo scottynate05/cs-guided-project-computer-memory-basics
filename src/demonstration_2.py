@@ -37,9 +37,9 @@ def hamming_weight(n):
     # set a counter
     counter = 0
 
-    # while n is not equal to 0
+    # iterate over n until it's equal to zero
     while n != 0:
-        # if n is equal to 1
+        # check if n (bitwise and) is equal to 1
         if n & 1 == 1:
             # increment counter
             counter += 1
@@ -49,6 +49,28 @@ def hamming_weight(n):
     # return counter
     return counter
 
+def hamming_2(n):
+    # set a counter
+    counter = 0
 
+    # convert n to a binary string
+    binary_str = bin(n)
+
+    # iterate over each char of the binary string
+    for i in binary_str:
+        # if the char is equal to 1
+        if i == '1':
+            # increment the counter
+            counter += 1
+
+    # return the counter
+    return counter
+
+# single line solution
+def hamming_3(n):
+    return bin(n).count('1')
+    # convert n to a string and return the count of the char we're looking for
 
 print(hamming_weight(10))
+print(hamming_2(4))
+print(hamming_3(130))
