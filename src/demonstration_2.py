@@ -34,5 +34,21 @@ returning the result
 
 """
 def hamming_weight(n):
-    
+    # set a counter
+    counter = 0
 
+    # while n is not equal to 0
+    while n != 0:
+        # if n is equal to 1
+        if n & 1 == 1:
+            # increment counter
+            counter += 1
+        # bit shift n to the right
+        n = n >> 1
+    
+    # return counter
+    return counter
+
+
+
+print(hamming_weight(10))
