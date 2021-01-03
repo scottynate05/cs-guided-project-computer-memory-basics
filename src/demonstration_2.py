@@ -15,7 +15,24 @@ Notes:
 numbers) but have the property that they don't have a + or - sign associated
 with them. Thus they are always non-negative (zero or positive). We use uint's
 when we know the value we are counting will always be non-negative."
+
+we can use a bitwise and to check the last digit of n 
+and if it is a 1 then increment a counter
+​
+we can use bitshift to the right to move our scope 
+or vison of the binary number of n 
+in effect incrementing our loop
+​
+another option in python you can convert 
+to a binary string by using the bin() function
+​
+.count method exists in a string
+​
+turn n in to a binary string
+run .count('1') on the binary string
+returning the result
+
 """
 def hamming_weight(n):
-    # Your code here
+    
 
